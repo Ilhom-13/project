@@ -1,3 +1,2 @@
 def func():
-    return 1+2+7+8
-     
+    return 1+2
