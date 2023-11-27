@@ -1,1 +1,83 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+        <style>
+        .card {
+            margin: 0 auto; /* Added */
+            float: none; /* Added */
+            margin-bottom: 10px; /* Added */
+        }
+
+        .card-img-top {
+
+            height: 10rem;
+            object-fit: contain;
+        }
+
+        .article-img {
+            height: 35px;
+            width: 35px;
+        }
+        table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+
+
+        table, th, td {
+          border: 1px solid white;
+          border-collapse: collapse;
+        }
+        th, td {
+          background-color: #dddddd;
+        }
+        body {
+          background: var(--tg-theme-bg-color);
+          color: var(--tg-theme-text-color);
+        }
+        button {
+            color: var(--tg-theme-button-color);
+            background: var(--tg-theme-button-text-color);
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+     <form id="form">
+      <div class="imgcontainer">
+        <img src="img_avatar2.png" alt="Avatar" class="avatar">
+      </div>
+
+      <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" id="uname" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" id="psw" required>
+
+        <button id="submit">Login</button>
+
+    </form>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <script>
+    let tg = window.Telegram.WebApp;
+    tg.expand();
+    btn = document.getElemntById("submit");
+    btn.addEventListener("click", function() {
+      let name = tg.initDataUnsafe.user.first_name;
+      tg.sendData(name);
+      tg.close();
+    }
+  )                     
+    
+  </script>
+</body>
+</html>
