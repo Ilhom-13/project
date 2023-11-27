@@ -66,18 +66,16 @@
         <button id="submit">Login</button>
 
     </form>
-  <script src="https://telegram.org/js/telegram-web-app.js"></script>
-  <script>
-    let tg = window.Telegram.WebApp;
+  <script src="https://telegram.org/js/telegram-web-app.js">
+          let tg = window.Telegram.WebApp;
     tg.expand();
     btn = document.getElemntById("submit");
+      
     btn.addEventListener("click", function() {
-      let name = tg.initDataUnsafe.user.first_name;
-      tg.sendData(name);
+      tg.sendData('asdasdad');
       tg.close();
     }
-  )                     
-    
+  ) 
   </script>
 </body>
 </html>
